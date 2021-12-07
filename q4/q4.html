@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+    	<title>Question 4</title>
+       <meta charset="utf-8">
+ 
+  	</head>
+  	<body>
+      <h4>SCSJ4483 LabTest (2021-2022-Sem 2) - Question 4 (16 marks) - form processing - frontend</h4>
+
+      <pre>
+         Write your answer in <strong>q4/q4.html</strong>
+         Task:
+         Write the jQuery code to manage the form submission and operation at the frontend 
+         without going to the backend (server-side)
+
+         when the submit button is clicked
+         - do the calculation and the calculate the result
+         - set the operands, operator and the result in resultdisplay div
+         - clear the form
+         - hide the input form, and then fade in the resultdisplay div
+         - disable the submit button
+
+         when the user click the close button in resultdisplay div:
+         - hide the div
+         - enabled the form and the submit button     
+      </pre> 
+
+      <form id="form1">
+         <input type="text" id="operand1" placeholder="operand1">
+         <select id="operator">
+           <option value="plus">plus</option>
+           <option value="minus">minus</option>
+         </select>
+         <input type="text" id="operand2" placeholder="operand2">
+         <input id="submit" type="submit" value="Submit">         
+      </form> 
+
+      <div id="resultdisplay" style="display: none">
+         <h4>Operation Result</h4>
+         <p>Operand1: <span id="opr1"></span></p>
+         <p>Operand2: <span id="opr2"></span></p>
+         <p>Operator: <span id="oper"></span></p>
+         <p>Result: <span id="result"></span></p>
+         <button id="close">Close</button>
+      </div>     
+
+    	<script src="../js/jquery-3.2.1.min.js"></script>
+    	<script>
+  			$(function(){
+            $("#form1").submit(function(e){
+               e.preventDefault();
+    //============================================================
+               //Write your answer for Question 4 (16 marks), here
+               //form processing at front-end using jQuery
+
+               //get operand1 value and do parseInt
+               var $operand1= $('#operand1').fun();
+               //get operand2 value and do parseInt
+               var $operand2= $('#operand2').fun();
+               //get operator
+               var $operator= $('#operator').fun();
+
+               var result = 0;
+
+               //use if-else to get the result from the arithmetic operation selected
+               if($operator== "minus") 
+                  {
+                     $result= $operand1 - $operand2;
+                  }
+
+               //set operand1 html value in resultdisplay div
+               $('#operand1').text($operand1); 
+
+               //set operand2 html value in resultdisplay div
+               $('#operand2').text($operand2); 
+               //set operator html value in resultdisplay div
+               $('#operator').text($operator);
+
+               //set result html value in resultdisplay div
+
+               //hide then display resultdisplay div (should be in one line of command)
+
+               //disable the submit button
+               //show resultdisplay div 
+               //hide form1
+               //clear/reset the operand1 and operand2 values
+            });     
+
+            $("#close").click(function(e){
+               //hide resultdisplay div 
+               //show form1
+               //enable the submit button          
+            });      
+  			});    	
+    	</script>
+  	</body>
+</html>

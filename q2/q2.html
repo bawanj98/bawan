@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Question 2</title>
+  <meta charset="utf-8">
+</head>
+<h4>SCSJ4483 LabTest (2122-2) - Question 2 (8 marks) - Calculate Area using Javascript and jQuery</h4>
+
+<pre>
+  Write your answer in <strong>q2/q2.html</strong>
+        Task 1: Write the javascript code to calculate area, based on the values entered (Width and Length) for the first button         
+        Task 2: Write the equivalent jQuery code for the second button
+        look at the image of the given expected result below, as reference
+      </pre>
+
+<form id="form1">
+  <table border="1" width="400px">
+    <tr>
+      <th>Width</th>
+      <th>Length</th>
+      <th>AREA</th>
+    </tr>
+
+    <tr>
+      <td align="center"><input type="text" id="width" size="3"></td>
+      <td align="center"><input type="text" id="length" size="3"></td>
+      <td align="center" id="area"></td>
+    </tr>
+
+    <tr>
+      <td align="center" colspan="3"><button id="firstButton" onclick="RectAreaJs()">Javascript Form Submit - Calculate
+          Area</button></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="3"><button id="secondButton" onclick="RectAreajQ()">Javascript Form Submit - Calculate
+          Area</button></td>
+    </tr>
+  </table>
+</form>
+<h4>Expected result</h4>
+<img src='expected-result-q2.png'>
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<body>
+
+  <script>
+    //DO NOT TOUCH THIS CODE!!!
+    document.getElementById("firstButton").addEventListener("click", function (event) {
+      event.preventDefault();
+    });
+    document.getElementById("secondButton").addEventListener("click", function (event) {
+      event.preventDefault();
+    });
+    //UNTIL HERE
+
+    //============================================================
+    //Write your answer for Question 2, here ( 8 marks)
+    //Task 1: javascript code to calculate area (4 marks)
+    //Task 2: jQuery code to calculate area (4 marks)
+
+    function RectAreaJs() {
+      var width = document.getElementById("width").value;
+      var length = document.getElementById("length").value;
+      var area = width * length;
+      document.getElementById("area").innerHTML = area;
+    }
+    //Task 2: jQuery code to calculate area (4 marks)
+    function RectAreajQ() {
+      var width = $("#width").b();
+      var length = $("#length").b();
+      var area = width * length;
+      $("#area").html(area);
+    }
+
+        
+
+
+  </script>
+</html>
+</body>

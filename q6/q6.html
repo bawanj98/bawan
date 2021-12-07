@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Question 6</title>
+   <meta charset="utf-8">
+<style>
+   body{
+      width: 70%;
+      margin: auto;
+      box-sizing: border-box;
+   }
+   span{
+      font-weight: bolder;
+      font-size: large;
+      font-style: italic;
+   }
+   h4{
+      background:  gray;
+   }
+
+   .container{
+      background: gray;
+      padding: 20px;
+      margin: 10px;
+   }
+   a{
+      text-decoration: none;
+      background: darkgrey;
+      padding: 10px;
+      /* margin-top: 20px; */
+   }
+   input{
+      height: 20px;
+      width: 140px;
+   }
+   table, th, td {
+      border:1px solid black;
+    }
+
+</style>
+</head>
+ 
+<body>
+   <h4>SCSJ4483 LabTest (2122-2) - Question 6 (8 marks) - Append Html Content</h4>
+
+   <pre>
+    Write your answer in <strong>q6/q6.html</strong>
+    Task:
+        Write the implementation for the button “Read & Display JSON”, 
+        by get the order records (json format) from file orders.json, 
+        format and display all the orders using table (or ul,li). 
+        Use plain javascript with XmlHttpRequest
+    </pre>
+
+   <body>
+      <div class="container">
+            <h4>Read and display JSON input data</h4>
+            <input type="submit" value="Read & Display JSON" id="ReadDisplayJSON" onclick="readDispJson()" value="add a new item">
+      </div>
+
+      <h2>List of Orders:</h2>
+      <div id="display-all-patients"></div>
+
+      <h4>Expected result</h4>
+      <img src='expected-result-q6.png'>
+   </body>
+
+   <script>
+      //Write your answer for Question 6 (8 marks) here
+      //implementation for the button “Read & Display JSON”, 
+      //get the order records (json format) from file orders.json, 
+      //format and display all the orders using table (or ul,li). 
+      function readDispJson(){
+          alert("read&display orders");
+
+      }
+
+   </script>
+</body>
+
+</html>
